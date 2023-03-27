@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 title=when(destination.id){
                     R.id.cardFragment -> "My Cart"
                     R.id.moreFragment -> "My Deshboard"
-                    else -> "onlineApp"
+                    else -> "onlineApp."
                 }
             }
 
