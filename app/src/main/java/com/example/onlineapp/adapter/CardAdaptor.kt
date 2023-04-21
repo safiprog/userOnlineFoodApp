@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.example.onlineapp.RoomDB.AppDatabase
 import com.example.onlineapp.RoomDB.ProductModel
 import com.example.onlineapp.databinding.LayoutCartItemBinding
 
@@ -27,6 +28,10 @@ class CardAdaptor(val context: Context,val list:List<ProductModel>):
         Glide.with(context).load(list[position].productImages).into(holder.binding.imageView4)
         holder.binding.textView4.text=list[position].productName
         holder.binding.textView5.text=list[position].productSp
+        val dao=AppDatabase.getDatabase(context).productDao()
+        holder.binding.deleteImages.setOnClickListener{
+
+        }
 
 
     }
